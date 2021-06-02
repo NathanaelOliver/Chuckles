@@ -1,146 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Scrollbar Widget</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-<style>
-:root {
---beige: #d4c9bd;
---white: #ffffff;
---brown: #5a4d46;
---green: #9ba167;
---none: #ffffff00;
-}
-div.scrollmenu {
-background-color: var(--beige);
-overflow: auto;
-white-space: nowrap;
-display: flex;
-}
-div.card {
-padding: 20px;
-padding-left: 30px;
-padding-right: 30px;
-margin: 40px;
-margin-bottom: 10px;
-background: var(--white);
-border-radius: 10px;
-border-style: solid;
-border-width: 4px;
-border-color: var(--green);
-}
-div.card h1{
-text-align: center;
-color: var(--brown);
-}
-div.card img{
-height: 400px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 20px;
-}
-div.button-group {
-margin: auto;
-display: flex;
-flex-direction: row;
-justify-content: center;
-}
-div.button-group button{
-background-color: var(--green); /* Green background */
-border: 1px solid var(--brown); /* Green border */
-color: var(--none); /* White text */
-width: 30px;
-height: 30px;
-cursor: pointer; /* Pointer/hand icon */
-}
-</style>	<script>
-		function changeImage(id, newImage) {
-			var img = document.getElementById(id);
-			img.src=newImage;
-			return false;
-		}
-	</script>
-	<body>
-		<div class="scrollmenu">
-			<div class="card">
-				<h1>Country Oak</h1>
-				<img id="Country" src="Cabinets/Country Oak.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Country', 'Cabinets/Country Oak.jpg');"/>
-				</div>
-			</div>
-			<div class="card">
-				<h1>Elegant Dove</h1>
-				<img id="Elegant" src="Cabinets/Elegant Dove.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Elegant', 'Cabinets/Elegant Dove.jpg');"/>
-					<button onclick="changeImage('Elegant', 'Cabinets/Elegant Espresso.jpg');"/>
-					<button onclick="changeImage('Elegant', 'Cabinets/Elegant Ocean_Blue.jpg');"/>
-					<button onclick="changeImage('Elegant', 'Cabinets/Elegant Smoky_Grey.png');"/>
-					<button onclick="changeImage('Elegant', 'Cabinets/Elegant Stone.png');"/>
-					<button onclick="changeImage('Elegant', 'Cabinets/Elegant White.jpg');"/>
-				</div>
-			</div>
-			<div class="card">
-				<h1>Fashion Dove</h1>
-				<img id="Fashion" src="Cabinets/Fashion Dove.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Fashion', 'Cabinets/Fashion Dove.jpg');"/>
-					<button onclick="changeImage('Fashion', 'Cabinets/Fashion Ocean_Blue.jpg');"/>
-					<button onclick="changeImage('Fashion', 'Cabinets/Fashion Pearl.jpg');"/>
-					<button onclick="changeImage('Fashion', 'Cabinets/Fashion White.jpg');"/>
-				</div>
-			</div>
-			<div class="card">
-				<h1>Harmony Pearl</h1>
-				<img id="Harmony" src="Cabinets/Harmony Pearl.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Harmony', 'Cabinets/Harmony Pearl.jpg');"/>
-				</div>
-			</div>
-			<div class="card">
-				<h1>Luxor Cinnamon</h1>
-				<img id="Luxor" src="Cabinets/Luxor Cinnamon.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Luxor', 'Cabinets/Luxor Cinnamon.jpg');"/>
-					<button onclick="changeImage('Luxor', 'Cabinets/Luxor Espresso.jpg');"/>
-					<button onclick="changeImage('Luxor', 'Cabinets/Luxor Smoky_Grey.jpg');"/>
-					<button onclick="changeImage('Luxor', 'Cabinets/Luxor White.jpg');"/>
-				</div>
-			</div>
-			<div class="card">
-				<h1>Matrix Greystone</h1>
-				<img id="Matrix" src="Cabinets/Matrix Greystone.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Matrix', 'Cabinets/Matrix Greystone.jpg');"/>
-					<button onclick="changeImage('Matrix', 'Cabinets/Matrix Silver.jpg');"/>
-				</div>
-			</div>
-			<div class="card">
-				<h1>Milano Slate</h1>
-				<img id="Milano" src="Cabinets/Milano Slate.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Milano', 'Cabinets/Milano Slate.jpg');"/>
-					<button onclick="changeImage('Milano', 'Cabinets/Milano White.jpg');"/>
-				</div>
-			</div>
-			<div class="card">
-				<h1>Park Avenue Blue</h1>
-				<img id="Park_Avenue" src="Cabinets/Park_Avenue Blue.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Park_Avenue', 'Cabinets/Park_Avenue Blue.jpg');"/>
-					<button onclick="changeImage('Park_Avenue', 'Cabinets/Park_Avenue White.jpg');"/>
-				</div>
-			</div>
-			<div class="card">
-				<h1>Richmond Stone</h1>
-				<img id="Richmond" src="Cabinets/Richmond Stone.jpg" alt="Image Unavailable">
-				<div class="button-group">
-					<button onclick="changeImage('Richmond', 'Cabinets/Richmond Stone.jpg');"/>
-				</div>
-			</div>
-		</div>
-	</body>
+  <head>
+    <title>Scrollbar Widget</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <style>
+    :root {
+      --black: #000000;
+      --beige: #d4c9bd;
+      --white: #ffffff;
+      --brown: #5a4d46;
+      --green: #9ba167;
+      --none: #ffffff00;
+    }
+    div.scrollmenu {
+      background-color: var(--beige);
+      overflow: auto;
+      white-space: nowrap;
+      display: flex;
+    }
+    div.card {
+      min-width: 250px;
+      display: block;
+      padding: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 20px;
+      margin-bottom: 10px;
+      background: var(--white);
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 4px;
+      border-color: var(--green);
+    }
+    div.card h1{
+      text-align: center;
+      color: var(--brown);
+    }
+    div.card img{
+      height: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+    div.button-group {
+      border-radius: 1px;
+      border-color: var(--black);
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    div.button-group button{
+      color: var(--none);
+      width: 30px;
+      height: 52px;
+      cursor: pointer;
+    }
+    button.btn-Discovery-Frost {
+      background-image:url('Cabinets/Fabuwood/Discovery Frost.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Fusion-Blanc {
+      background-image:url('Cabinets/Fabuwood/Fusion Blanc.png');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Fusion-Dove {
+      background-image:url('Cabinets/Fabuwood/Fusion Dove.png');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Fusion-Nickel {
+      background-image:url('Cabinets/Fabuwood/Fusion Nickel.png');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Galaxy-Cobblestone {
+      background-image:url('Cabinets/Fabuwood/Galaxy Cobblestone.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Galaxy-Espresso {
+      background-image:url('Cabinets/Fabuwood/Galaxy Espresso.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Galaxy-Frost {
+      background-image:url('Cabinets/Fabuwood/Galaxy Frost.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Galaxy-Horizon {
+      background-image:url('Cabinets/Fabuwood/Galaxy Horizon.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Galaxy-Linen {
+      background-image:url('Cabinets/Fabuwood/Galaxy Linen.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Galaxy-Nickel {
+      background-image:url('Cabinets/Fabuwood/Galaxy Nickel.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Hallmark-Frost {
+      background-image:url('Cabinets/Fabuwood/Hallmark Frost.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Imperio-Dove {
+      background-image:url('Cabinets/Fabuwood/Imperio Dove.png');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Imperio-Nickel {
+      background-image:url('Cabinets/Fabuwood/Imperio Nickel.png');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Metro-Frost {
+      background-image:url('Cabinets/Fabuwood/Metro Frost.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Metro-Java {
+      background-image:url('Cabinets/Fabuwood/Metro Java.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Metro-Mist {
+      background-image:url('Cabinets/Fabuwood/Metro Mist.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Nexus-Frost {
+      background-image:url('Cabinets/Fabuwood/Nexus Frost.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Nexus-Slate {
+      background-image:url('Cabinets/Fabuwood/Nexus Slate.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    :root {
+      --black: #000000;
+      --beige: #d4c9bd;
+      --white: #ffffff;
+      --brown: #5a4d46;
+      --green: #9ba167;
+      --none: #ffffff00;
+    }
+    div.scrollmenu {
+      background-color: var(--beige);
+      overflow: auto;
+      white-space: nowrap;
+      display: flex;
+    }
+    div.card {
+      min-width: 250px;
+      display: block;
+      padding: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 20px;
+      margin-bottom: 10px;
+      background: var(--white);
+      border-radius: 10px;
+      border-style: solid;
+      border-width: 4px;
+      border-color: var(--green);
+    }
+    div.card h1{
+      text-align: center;
+      color: var(--brown);
+    }
+    div.card img{
+      height: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+    div.button-group {
+      border-radius: 1px;
+      border-color: var(--black);
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    div.button-group button{
+      color: var(--none);
+      width: 30px;
+      height: 52px;
+      cursor: pointer;
+    }
+    button.btn-Elegant-Dove {
+      background-image:url('Cabinets/CNC/Elegant Dove.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Elegant-Espresso {
+      background-image:url('Cabinets/CNC/Elegant Espresso.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Elegant-Ocean_Blue {
+      background-image:url('Cabinets/CNC/Elegant Ocean_Blue.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Elegant-Smoky_Grey {
+      background-image:url('Cabinets/CNC/Elegant Smoky_Grey.png');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Elegant-Stone {
+      background-image:url('Cabinets/CNC/Elegant Stone.png');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Elegant-White {
+      background-image:url('Cabinets/CNC/Elegant White.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Fashion-Dove {
+      background-image:url('Cabinets/CNC/Fashion Dove.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Fashion-Ocean_Blue {
+      background-image:url('Cabinets/CNC/Fashion Ocean_Blue.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Fashion-Pearl {
+      background-image:url('Cabinets/CNC/Fashion Pearl.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Fashion-White {
+      background-image:url('Cabinets/CNC/Fashion White.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Harmony-Pearl {
+      background-image:url('Cabinets/CNC/Harmony Pearl.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Luxor-Cinnamon {
+      background-image:url('Cabinets/CNC/Luxor Cinnamon.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Luxor-Espresso {
+      background-image:url('Cabinets/CNC/Luxor Espresso.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Luxor-Smoky_Grey {
+      background-image:url('Cabinets/CNC/Luxor Smoky_Grey.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Luxor-White {
+      background-image:url('Cabinets/CNC/Luxor White.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Matrix-Greystone {
+      background-image:url('Cabinets/CNC/Matrix Greystone.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Matrix-Silver {
+      background-image:url('Cabinets/CNC/Matrix Silver.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Milano-Slate {
+      background-image:url('Cabinets/CNC/Milano Slate.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Milano-White {
+      background-image:url('Cabinets/CNC/Milano White.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Park_Avenue-Blue {
+      background-image:url('Cabinets/CNC/Park_Avenue Blue.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Park_Avenue-White {
+      background-image:url('Cabinets/CNC/Park_Avenue White.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+    button.btn-Richmond-Stone {
+      background-image:url('Cabinets/CNC/Richmond Stone.jpg');
+      background-size: 26px;
+      margin: 2px;
+    }
+  </style>
+  <script>
+    function changeImage(id, new_image, new_text) {
+      var img = document.getElementById(id + " img");
+      img.src=new_image;
+      document.getElementById(id + " title").innerHTML = new_text;
+      return false;
+    }
+  </script>
+  <body>
+    <div class="scrollmenu">
+      <div class="card">
+        <h1 id="Fabuwood Discovery title">Discovery Frost</h1>
+        <img id="Fabuwood Discovery img" src="Cabinets/Fabuwood/Discovery Frost.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Discovery-Frost" onclick="changeImage('Fabuwood Discovery', 'Cabinets/Fabuwood/Discovery Frost.jpg', 'Discovery Frost');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="Fabuwood Fusion title">Fusion Blanc</h1>
+        <img id="Fabuwood Fusion img" src="Cabinets/Fabuwood/Fusion Blanc.png" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Fusion-Blanc" onclick="changeImage('Fabuwood Fusion', 'Cabinets/Fabuwood/Fusion Blanc.png', 'Fusion Blanc');"/>
+          <button class="btn-Fusion-Dove" onclick="changeImage('Fabuwood Fusion', 'Cabinets/Fabuwood/Fusion Dove.png', 'Fusion Dove');"/>
+          <button class="btn-Fusion-Nickel" onclick="changeImage('Fabuwood Fusion', 'Cabinets/Fabuwood/Fusion Nickel.png', 'Fusion Nickel');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="Fabuwood Galaxy title">Galaxy Cobblestone</h1>
+        <img id="Fabuwood Galaxy img" src="Cabinets/Fabuwood/Galaxy Cobblestone.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Galaxy-Cobblestone" onclick="changeImage('Fabuwood Galaxy', 'Cabinets/Fabuwood/Galaxy Cobblestone.jpg', 'Galaxy Cobblestone');"/>
+          <button class="btn-Galaxy-Espresso" onclick="changeImage('Fabuwood Galaxy', 'Cabinets/Fabuwood/Galaxy Espresso.jpg', 'Galaxy Espresso');"/>
+          <button class="btn-Galaxy-Frost" onclick="changeImage('Fabuwood Galaxy', 'Cabinets/Fabuwood/Galaxy Frost.jpg', 'Galaxy Frost');"/>
+          <button class="btn-Galaxy-Horizon" onclick="changeImage('Fabuwood Galaxy', 'Cabinets/Fabuwood/Galaxy Horizon.jpg', 'Galaxy Horizon');"/>
+          <button class="btn-Galaxy-Linen" onclick="changeImage('Fabuwood Galaxy', 'Cabinets/Fabuwood/Galaxy Linen.jpg', 'Galaxy Linen');"/>
+          <button class="btn-Galaxy-Nickel" onclick="changeImage('Fabuwood Galaxy', 'Cabinets/Fabuwood/Galaxy Nickel.jpg', 'Galaxy Nickel');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="Fabuwood Hallmark title">Hallmark Frost</h1>
+        <img id="Fabuwood Hallmark img" src="Cabinets/Fabuwood/Hallmark Frost.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Hallmark-Frost" onclick="changeImage('Fabuwood Hallmark', 'Cabinets/Fabuwood/Hallmark Frost.jpg', 'Hallmark Frost');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="Fabuwood Imperio title">Imperio Dove</h1>
+        <img id="Fabuwood Imperio img" src="Cabinets/Fabuwood/Imperio Dove.png" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Imperio-Dove" onclick="changeImage('Fabuwood Imperio', 'Cabinets/Fabuwood/Imperio Dove.png', 'Imperio Dove');"/>
+          <button class="btn-Imperio-Nickel" onclick="changeImage('Fabuwood Imperio', 'Cabinets/Fabuwood/Imperio Nickel.png', 'Imperio Nickel');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="Fabuwood Metro title">Metro Frost</h1>
+        <img id="Fabuwood Metro img" src="Cabinets/Fabuwood/Metro Frost.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Metro-Frost" onclick="changeImage('Fabuwood Metro', 'Cabinets/Fabuwood/Metro Frost.jpg', 'Metro Frost');"/>
+          <button class="btn-Metro-Java" onclick="changeImage('Fabuwood Metro', 'Cabinets/Fabuwood/Metro Java.jpg', 'Metro Java');"/>
+          <button class="btn-Metro-Mist" onclick="changeImage('Fabuwood Metro', 'Cabinets/Fabuwood/Metro Mist.jpg', 'Metro Mist');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="Fabuwood Nexus title">Nexus Frost</h1>
+        <img id="Fabuwood Nexus img" src="Cabinets/Fabuwood/Nexus Frost.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Nexus-Frost" onclick="changeImage('Fabuwood Nexus', 'Cabinets/Fabuwood/Nexus Frost.jpg', 'Nexus Frost');"/>
+          <button class="btn-Nexus-Slate" onclick="changeImage('Fabuwood Nexus', 'Cabinets/Fabuwood/Nexus Slate.jpg', 'Nexus Slate');"/>
+        </div>
+      </div>
+    </div>
+    <div class="scrollmenu">
+      <div class="card">
+        <h1 id="CNC Elegant title">Elegant Dove</h1>
+        <img id="CNC Elegant img" src="Cabinets/CNC/Elegant Dove.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Elegant-Dove" onclick="changeImage('CNC Elegant', 'Cabinets/CNC/Elegant Dove.jpg', 'Elegant Dove');"/>
+          <button class="btn-Elegant-Espresso" onclick="changeImage('CNC Elegant', 'Cabinets/CNC/Elegant Espresso.jpg', 'Elegant Espresso');"/>
+          <button class="btn-Elegant-Ocean_Blue" onclick="changeImage('CNC Elegant', 'Cabinets/CNC/Elegant Ocean_Blue.jpg', 'Elegant Ocean Blue');"/>
+          <button class="btn-Elegant-Smoky_Grey" onclick="changeImage('CNC Elegant', 'Cabinets/CNC/Elegant Smoky_Grey.png', 'Elegant Smoky Grey');"/>
+          <button class="btn-Elegant-Stone" onclick="changeImage('CNC Elegant', 'Cabinets/CNC/Elegant Stone.png', 'Elegant Stone');"/>
+          <button class="btn-Elegant-White" onclick="changeImage('CNC Elegant', 'Cabinets/CNC/Elegant White.jpg', 'Elegant White');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="CNC Fashion title">Fashion Dove</h1>
+        <img id="CNC Fashion img" src="Cabinets/CNC/Fashion Dove.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Fashion-Dove" onclick="changeImage('CNC Fashion', 'Cabinets/CNC/Fashion Dove.jpg', 'Fashion Dove');"/>
+          <button class="btn-Fashion-Ocean_Blue" onclick="changeImage('CNC Fashion', 'Cabinets/CNC/Fashion Ocean_Blue.jpg', 'Fashion Ocean Blue');"/>
+          <button class="btn-Fashion-Pearl" onclick="changeImage('CNC Fashion', 'Cabinets/CNC/Fashion Pearl.jpg', 'Fashion Pearl');"/>
+          <button class="btn-Fashion-White" onclick="changeImage('CNC Fashion', 'Cabinets/CNC/Fashion White.jpg', 'Fashion White');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="CNC Harmony title">Harmony Pearl</h1>
+        <img id="CNC Harmony img" src="Cabinets/CNC/Harmony Pearl.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Harmony-Pearl" onclick="changeImage('CNC Harmony', 'Cabinets/CNC/Harmony Pearl.jpg', 'Harmony Pearl');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="CNC Luxor title">Luxor Cinnamon</h1>
+        <img id="CNC Luxor img" src="Cabinets/CNC/Luxor Cinnamon.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Luxor-Cinnamon" onclick="changeImage('CNC Luxor', 'Cabinets/CNC/Luxor Cinnamon.jpg', 'Luxor Cinnamon');"/>
+          <button class="btn-Luxor-Espresso" onclick="changeImage('CNC Luxor', 'Cabinets/CNC/Luxor Espresso.jpg', 'Luxor Espresso');"/>
+          <button class="btn-Luxor-Smoky_Grey" onclick="changeImage('CNC Luxor', 'Cabinets/CNC/Luxor Smoky_Grey.jpg', 'Luxor Smoky Grey');"/>
+          <button class="btn-Luxor-White" onclick="changeImage('CNC Luxor', 'Cabinets/CNC/Luxor White.jpg', 'Luxor White');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="CNC Matrix title">Matrix Greystone</h1>
+        <img id="CNC Matrix img" src="Cabinets/CNC/Matrix Greystone.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Matrix-Greystone" onclick="changeImage('CNC Matrix', 'Cabinets/CNC/Matrix Greystone.jpg', 'Matrix Greystone');"/>
+          <button class="btn-Matrix-Silver" onclick="changeImage('CNC Matrix', 'Cabinets/CNC/Matrix Silver.jpg', 'Matrix Silver');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="CNC Milano title">Milano Slate</h1>
+        <img id="CNC Milano img" src="Cabinets/CNC/Milano Slate.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Milano-Slate" onclick="changeImage('CNC Milano', 'Cabinets/CNC/Milano Slate.jpg', 'Milano Slate');"/>
+          <button class="btn-Milano-White" onclick="changeImage('CNC Milano', 'Cabinets/CNC/Milano White.jpg', 'Milano White');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="CNC Park_Avenue title">Park Avenue Blue</h1>
+        <img id="CNC Park_Avenue img" src="Cabinets/CNC/Park_Avenue Blue.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Park_Avenue-Blue" onclick="changeImage('CNC Park_Avenue', 'Cabinets/CNC/Park_Avenue Blue.jpg', 'Park Avenue Blue');"/>
+          <button class="btn-Park_Avenue-White" onclick="changeImage('CNC Park_Avenue', 'Cabinets/CNC/Park_Avenue White.jpg', 'Park Avenue White');"/>
+        </div>
+      </div>
+      <div class="card">
+        <h1 id="CNC Richmond title">Richmond Stone</h1>
+        <img id="CNC Richmond img" src="Cabinets/CNC/Richmond Stone.jpg" alt="Image Unavailable">
+        <div class="button-group">
+          <button class="btn-Richmond-Stone" onclick="changeImage('CNC Richmond', 'Cabinets/CNC/Richmond Stone.jpg', 'Richmond Stone');"/>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
