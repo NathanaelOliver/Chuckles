@@ -39,8 +39,8 @@ def create_custom_buttons(f, company, arr):
     for e in element:
       f.write("    button.btn-")
       f.write(unformat(e))
-      f.write(" {\n      background-image:url('Cabinets/" + company + "/")
-      f.write(e)
+      f.write(" {\n      background-image:url('https://github.com/NathanaelOliver/Chuckles/blob/main/Cabinets/" + company + "/")
+      f.write(e.replace(' ', '%20') + '?raw=true')
       f.write("');\n      background-size: 26px;\n      margin: 2px;\n    }\n")
 
 def unformat(str):
@@ -72,7 +72,7 @@ def make_card(f, company, set):
   f.write(format(set[0]))
   f.write("</h1>\n        <img id=\"")
   f.write(company + " " + type_of(set[0]) + " img")
-  f.write("\" src=\"Cabinets/" + company + '/' + set[0])
+  f.write("\" src=\"https://github.com/NathanaelOliver/Chuckles/blob/main/Cabinets/" + company + '/' + set[0].replace(' ', '%20') + '?raw=true') 
   f.write("\" alt=\"Image Unavailable\">\n")
   f.write("        <div class=\"button-group\">\n")
   for element in set:
@@ -85,7 +85,8 @@ def make_button(f, company, element):
   f.write(unformat(element))
   f.write("\" onclick=\"changeImage('")
   f.write(company + " " + type_of(element))
-  f.write("', 'Cabinets/" + company + "/" + element + "', '" + format(element))
+  
+  f.write("', 'https://github.com/NathanaelOliver/Chuckles/blob/main/Cabinets/" + company + "/" + element.replace(' ', '%20') + '?raw=true' + "', '" + format(element))
   f.write("');\"/>\n")
 
 def format(str):
