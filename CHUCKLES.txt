@@ -1,0 +1,15 @@
+CHUCKLES
+highlight selected door in color that stands out
+Wrap names
+Faster load up time
+More intuitive side scroll?
+
+spec book == 2 hard ? sizes : specbook;
+
+truwood	 semi-custom ??? link to specbook
+
+step 1: color
+step 2: sizes
+step 3: how its constructed (plywood or pine, etc.)
+
+
